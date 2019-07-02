@@ -18,7 +18,7 @@ console.log( dadoUno);
 var dadoDue = Math.floor(Math.random() * 6)+1;
 console.log(dadoDue);
 // stampo il risultato del secondo dado
-secondoDado.innerHTML = '<p>' + dadoDue + '</p>';
+// secondoDado.innerHTML = '<p>' + dadoDue + '</p>';
 
 
 // sommo i due nomeri casuali
@@ -34,33 +34,69 @@ else {
   document.getElementById('par').innerHTML = 'HAI PERSO :(';
 }
 
-
-// for (i = dadoUno; i > 0; i--) {
-//    console.log(i);
-//    document.getElementById("demo").innerHTML = i;
+// var data = [dadoUno,dadoDue];
+// var myList = '<ul>';
+// for (var i = dadoUno; i > 0; i--) {
+//   myList += '<li>' + '<div class="palla"></div>' + '</li>';
 // }
+// myList += '</ul>';
+// primoDado.innerHTML = myList;
+//
+// var myList = '<ul>';
+// for (var i = dadoDue; i > 0; i--) {
+//   myList += '<li>' + '<div class="palla"></div>' + '</li>';
+// }
+// myList += '</ul>';
+// secondoDado.innerHTML = myList;
 
-
-var data = [dadoUno,dadoDue];
-var myList = '<ul>';
+var elenco = ''
 for (var i = dadoUno; i > 0; i--) {
-  myList += '<li>' + '<div class="palla"></div>' + '</li>';
+     elenco += '<li>' + '<div class="palla blue"></div>' + '</li>';
 }
-myList += '</ul>';
-primoDado.innerHTML = myList;
 
-var myList = '<ul>';
+var d = document.getElementById("elencoUno");
+
+if (dadoUno % 2 == 0) {
+  d.className += "pari";
+}
+else {
+  d.className += "dispari";
+}
+document.getElementById('elencoUno').innerHTML = elenco;
+
+
+
+
+
+var elenco = ''
 for (var i = dadoDue; i > 0; i--) {
-  myList += '<li>' + '<div class="palla"></div>' + '</li>';
+     elenco += '<li>' + '<div class="palla red"></div>' + '</li>';
 }
-myList += '</ul>';
-secondoDado.innerHTML = myList;
+
+var d = document.getElementById("elencoDue");
+
+if (dadoDue % 2 == 0) {
+  d.className += "pari";
+}
+else {
+  d.className += "dispari";
+}
+document.getElementById('elencoDue').innerHTML = elenco;
 
 
- // document.getElementById("demo").innerHTML = numero;
+// for (var i = dadoDue; i > 0; i--) {
+//   if (dadoDue % 2 == 0) {
+//      elenco += '<li>' + '<div class="palla red"></div>' + '</li>';
+//   }
+//   else {
+//     elenco += '<li>' + '<div class="palla blue"></div>' + '</li>';
+//   }
+// }
+// document.getElementById('elencoDue').innerHTML = elenco;
+//
 
- // array = ["example1", "example2", "example3"];
- // for (i = 0; i < array.length; i++)
- //   document.writeln((i+1) + ": " + array[i]);
+
+
+
 
 //

@@ -9,8 +9,7 @@
   margin: 40px;
 
 }
-
-div > p{
+/* div > p{
   font-size: 100px;
   font-weight: 500;
   color: black;
@@ -33,4 +32,50 @@ ul{
   background:blue;
   margin: 15px;
   display: inline-block;
+} */
+
+
+div > p{
+  font-size: 100px;
+  font-weight: 500;
+  color: black;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+ul{
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  height: 200px;
+
+}
+
+ul.pari{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+ul.dispari{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.palla{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 15px;
+  display: inline-block;
+}
+.red{
+  background: red;
+}
+.blue{
+  background: blue;
 }
