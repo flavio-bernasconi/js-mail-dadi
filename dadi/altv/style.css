@@ -1,0 +1,36 @@
+.dado{
+  height: 200px;
+  width: 200px;
+  background: white;
+  box-shadow: 4px 4px 10px black;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+
+}
+
+div > p{
+  font-size: 100px;
+  font-weight: 500;
+  color: black;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+.palla{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background:blue;
+  margin: 15px;
+  display: inline-block;
+}
