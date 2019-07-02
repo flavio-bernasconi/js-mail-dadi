@@ -34,40 +34,43 @@ else {
   document.getElementById('par').innerHTML = 'HAI PERSO :(';
 }
 
-// var data = [dadoUno,dadoDue];
-// var myList = '<ul>';
-// for (var i = dadoUno; i > 0; i--) {
-//   myList += '<li>' + '<div class="palla"></div>' + '</li>';
-// }
-// myList += '</ul>';
-// primoDado.innerHTML = myList;
-//
-// var myList = '<ul>';
-// for (var i = dadoDue; i > 0; i--) {
-//   myList += '<li>' + '<div class="palla"></div>' + '</li>';
-// }
-// myList += '</ul>';
-// secondoDado.innerHTML = myList;
 
-var elenco = ''
+// elenco è l' UL presente nel html
+var elenco = '';
+// indice uguale al numero del primo dado
 for (var i = dadoUno; i > 0; i--) {
+    // elenco viene popolato con tanti LI
+    // quanti il numero del dado indica.
+    //la classe palla sarà colei che definirà lo stile dei pallini
      elenco += '<li>' + '<div class="palla blue"></div>' + '</li>';
 }
 
+//d richiama il primo elenco contenuto nel primo dado
+// la struttura html sarà ul'elecnoUno' > li
 var d = document.getElementById("elencoUno");
 
+//se il lancio è pari > quindi se dividiamo in 2 il
+// risultato del lancio il resto (%) sarà 0 allora aggiungo la classe pari
+//all'elemto d (primo elenco). Queste due classi differenziano
+// lo stile di distribuzione delle palline sui dadi
 if (dadoUno % 2 == 0) {
   d.className += "pari";
+}
+else if  (dadoUno  == 5 || 3) {
+  d.className += "pari strano";
 }
 else {
   d.className += "dispari";
 }
+//Infine stampo la variabile elenco all'interno dell'elemto elencoUno
+// nella pagina HTML cosi da rendere visibili i pallini
 document.getElementById('elencoUno').innerHTML = elenco;
 
 
 
 
 
+//LEGGI COMMENTI SOPRA STESSO PROCEDIMENTO
 var elenco = ''
 for (var i = dadoDue; i > 0; i--) {
      elenco += '<li>' + '<div class="palla red"></div>' + '</li>';
@@ -78,23 +81,13 @@ var d = document.getElementById("elencoDue");
 if (dadoDue % 2 == 0) {
   d.className += "pari";
 }
+else if  (dadoDue  == 5 || 3) {
+  d.className += "pari strano";
+}
 else {
   d.className += "dispari";
 }
 document.getElementById('elencoDue').innerHTML = elenco;
-
-
-// for (var i = dadoDue; i > 0; i--) {
-//   if (dadoDue % 2 == 0) {
-//      elenco += '<li>' + '<div class="palla red"></div>' + '</li>';
-//   }
-//   else {
-//     elenco += '<li>' + '<div class="palla blue"></div>' + '</li>';
-//   }
-// }
-// document.getElementById('elencoDue').innerHTML = elenco;
-//
-
 
 
 

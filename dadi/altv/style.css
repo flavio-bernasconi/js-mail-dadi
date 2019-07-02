@@ -1,6 +1,6 @@
 .dado{
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   background: white;
   box-shadow: 4px 4px 10px black;
   display: inline-block;
@@ -43,27 +43,30 @@ div > p{
   padding: 50px;
   text-align: center;
 }
-ul{
+
+/* ul{
   box-sizing: border-box;
   list-style: none;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
   height: 200px;
+  padding: 0;
 
 }
 
 ul.pari{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 ul.dispari{
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+li{
+  flex-basis: 44%;
+} */
 
 
 .palla{
@@ -78,4 +81,27 @@ ul.dispari{
 }
 .blue{
   background: blue;
+}
+
+
+.pari {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 10px;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+}
+.dispari {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-gap: 10px;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+}
+
+.dispari li, .pari li {
+   place-self: center;
 }
